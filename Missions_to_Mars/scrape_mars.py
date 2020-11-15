@@ -86,7 +86,7 @@ def scrape():
     mars["news_p"] = news_p
     mars["featured_image_url"] = featured_image_url
     mars["mars_facts"] = html_table
-    mars["hemispher_image_urls"] = hemisphere_image_urls
+    mars["hemisphere_image_urls"] = hemisphere_image_urls
 
     # Close the browser after scraping
     browser.quit()

@@ -15,10 +15,10 @@ mongo.db.collection.drop()
 def home():
     
     # Find one record of data from the mongo database
-    mars = mongo.db.mars.find_one()
+    index_data = mongo.db.collection.find_one()
 
     # Return template and data
-    return render_template("index.html", mars=mars)
+    return render_template("index.html", index_data=index_data)
 
 # Route that will trigger the scrape function
 @app.route("/scrape")
@@ -26,8 +26,10 @@ def scrape():
     
     # Run the scrape function
     mars = scrape_mars.scrape()
-    mars.update({}, mars, upsert=True)
-    return redirect("/", code=302)
+
+    #  Update the Mongo database using update and upsert=True
+    mongo.db.collection.update({}, scrape_mars, upsert=True)
+    return redirect("/")
 
 if __name__ == "__main__":
     app.run(debug=True)
