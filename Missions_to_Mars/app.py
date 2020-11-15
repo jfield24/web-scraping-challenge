@@ -28,7 +28,7 @@ def scrape():
     mars = scrape_mars.scrape()
 
     #  Update the Mongo database using update and upsert=True
-    mongo.db.collection.update({}, scrape_mars, upsert=True)
+    mongo.db.collection.update({}, mars, upsert=True)
     return redirect("/")
 
 if __name__ == "__main__":
