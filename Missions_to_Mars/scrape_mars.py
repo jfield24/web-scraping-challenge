@@ -50,6 +50,7 @@ def scrape():
 
     # Mars Hemispheres
     url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
+    base_url = "https://astrogeology.usgs.gov"
     browser.visit(url)
 
     html = browser.html
@@ -62,11 +63,6 @@ def scrape():
     for item in items:
         urls.append(base_url + item.find('a')['href'])
         titles.append(item.find('h3').text)
-    
-    browser.visit(urls[0])
-    html = browser.html
-    soup = bs(html, 'html.parser')
-    img_url = base_url+soup.find('img',class_='wide-image')['src']
 
     img_urls = []
     for img_url in urls:
