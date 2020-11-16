@@ -1,5 +1,15 @@
-.box{
-    padding: 2px;
-    border: rgb(0,0,0) 2px solid;
-    margin: 10px 0px 10px 0px;
+#news{
+  padding-left:40px;  
+}
+
+h3{
+    font: bold 20px "Verdana";
+}
+
+#featured-image{
+    margin: 140px 30px 160px 40px;
+    padding-left: 60px;
+    padding-right: 80px;
+    padding-top: 60px;
+    padding-bottom: 40px;
 }

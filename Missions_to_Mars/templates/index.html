@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mission to Mars</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container-fluid">
-        <div class="jumbotron text-center" style="background: white;">
-          <h1 style: font="Georgia">Mission to Mars</h1>
+        <div class="jumbotron text-center";>
+          <h1 style: font-family="Georgia">Mission to Mars</h1>
           <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
         </div>
         <div class="row">
-            <div class="col col-12">
+            <div id="news" class="col-lg-12 col-md-12 col-sm-12">
                 <h3>Latest Mars News</h3>
                 <h4>{{index_data.news_title}}</h4>
                 <h5>{{index_data.news_p}}</h5>
             </div>
         </div>
         <div class="row">
-            <div class="col col-lg-7">
+            <div id = "featured-image" class="col-lg-7 col-md-7 col-sm-12">
                 <h3>Featured Mars Image</h3>
                 <img style="display: inline-block" class="mr-4 about-img img-responsive" src="{{index_data.featured_image_url}}" alt="featured_image">
             </div>
