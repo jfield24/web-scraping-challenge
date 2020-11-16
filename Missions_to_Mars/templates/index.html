@@ -15,36 +15,37 @@
           <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
         </div>
         <div class="row">
-            <div id="news" class="col-lg-12 col-md-12 col-sm-12">
+            <div id="news" class="col-md-12">
                 <h3>Latest Mars News</h3>
                 <h4>{{index_data.news_title}}</h4>
                 <h5>{{index_data.news_p}}</h5>
             </div>
         </div>
         <div class="row">
-            <div id = "featured-image" class="col-md-8">
+            <div class="col-md-8">
                 <h3>Featured Mars Image</h3>
-                <img style="display: inline-block" class="mr-4 about-img img-responsive" src="{{index_data.featured_image_url}}" alt="featured_image">
+                <img class="img-responsive" src="{{index_data.featured_image_url}}" alt="featured_image">
             </div>
-            <div class="col-md-4">
-              <div class="row">
+            <div class="col-md-4 align">
+              <div id="table" class="row">
                 <h4>Mars Facts</h4>
                 {{index_data.mars_facts | safe}}
               </div>
             </div>
         </div>
         <div class="row">
-            <div id="hemispheres" class="col-md-12 text-center">
-                <h2> Mars Hemispheres</h2>
-            </div>
+          <div class="page-header">
+            <h2 class="text-center" style="font-weight: bold;"> Mars Hemispheres</h2>
+          </div>
         </div>     
-        <hr>
         <div class="row">
             {% for image_url in index_data.hemisphere_image_urls %}
               <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="thumbnail">
                   <img src={{image_url.img_url}} alt={{image_url.img_url}}>
-                  <h3>{{image_url.title}}</h3>
+                  <div class="caption">
+                    <h3 style= "font-weight: bold;">{{image_url.title}}</h3>
+                  </div>
                 </div>
               </div>
             {% endfor %}
