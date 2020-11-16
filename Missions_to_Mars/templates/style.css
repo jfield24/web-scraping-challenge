@@ -13,3 +13,16 @@ h3{
     padding-top: 60px;
     padding-bottom: 40px;
 }
+
+#table{
+    margin: 140px 30px 160px 150px;
+    padding-left: 260px;
+    padding-top: 70px;
+}
+
+
+
+#flex{
+    display: flexbox;
+    align-items: space-around;
+}

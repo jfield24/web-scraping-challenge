@@ -26,9 +26,9 @@
                 <h3>Featured Mars Image</h3>
                 <img style="display: inline-block" class="mr-4 about-img img-responsive" src="{{index_data.featured_image_url}}" alt="featured_image">
             </div>
-            <div class="col col-lg-5">
+            <div id="table" class="col-lg-4">
                 <h4 style="align-content: right;">Mars Facts</h4>
-                <table border="2" class="dataframe" style="display:inline-block;">
+                <table border="2" class="dataframe" style="display:inline-block;" id="table">
                     <thead>
                       <tr style="text-align: right;">
                         <th></th>
@@ -88,12 +88,10 @@
         <hr>
         <div class="row">
             {% for image_url in index_data.hemisphere_image_urls %}
-            <div class="col col-6">
-                <div class="box">
-                    <img src={{image_url.img_url}} alt={{image_url.img_url}}>
-                    <h3>{{image_url.title}}</h3>
-                </div>
-            </div>
+              <div id="flex" class="col-lg-6 col-md-6 col-sm-12">
+                <img src={{image_url.img_url}} alt={{image_url.img_url}}>
+                <h3>{{image_url.title}}</h3>
+              </div>
             {% endfor %}
         </div>     
 </body>
