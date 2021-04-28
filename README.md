@@ -25,7 +25,7 @@ The purpose of this project was to scrape multiple websites to gather images and
 
 ---
 
-## Necessary Steps to Run all the Project
+## Steps needed to run all of the project
 
 1. Install or have installed these libraries in your Git Environment:
         -   pandas
